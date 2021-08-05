@@ -1,0 +1,302 @@
+body{
+    font-family: 'Barlow', sans-serif;
+    font-size:18px;
+}
+
+h1, h2, h3,h5,.sec-2 a{
+    font-family: 'Fraunces', serif;
+}
+
+/********** navbar section **********/
+
+nav{
+    position: absolute;
+    top:20px;
+    left:0;
+    right: 0;
+    z-index: 2;
+}
+nav .container{
+    display:flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    position:absolute;
+    top: 50px;
+    width:90%;
+    text-align: center;
+    padding:10px 0;
+    background-color: #fff;
+    opacity: 0;
+    transition:all 0.4s;
+}
+nav li{
+    padding:10px;
+}
+
+nav ul li:last-child a{
+    background-color: hsla(51, 100%, 49%);
+    display:inline-block;
+    padding:8px 20px;
+    border-radius: 20px;
+    color: #000;
+}
+
+nav a{
+    color:rgb(104, 104, 104);
+}
+
+/********** header section ********/
+header{
+    min-height: 100vh;
+    background-image: url('../images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+h1{
+    
+    color:#fff;
+    letter-spacing: 5px;
+    padding-bottom:15px;
+}
+
+/********* second section *********/
+
+.sec-2 a{
+    color: #000;
+    font-weight: 900;
+    font-size: 16px;
+    position: relative;
+    z-index: 3;
+}
+.sec-2 p{
+    color: hsl(210, 4%, 67%);
+}
+
+.brdr1, .brdr2{
+    width:130px;
+    height: 10px;
+    background-color: hsla(51, 100%, 49%, 0.356);
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    bottom:10px;
+}
+
+.brdr2{
+    background-color: hsla(7, 99%, 70%, 0.329);
+}
+.more-box:hover .brdr1{
+    background-color: hsla(51, 100%, 49%);
+}
+
+.more-box:hover .brdr2{
+    background-color: hsla(7, 99%, 70%);
+}
+.sec-2 article{
+    position: absolute;
+    bottom:5%;
+}
+.sec-2 .graphic-article p,.sec-2 .graphic-article h3{
+    color:hsl(167, 40%, 24%);
+}
+
+.sec-2 .photo-article p,.sec-2 .photo-article h3{
+    color:hsl(198, 62%, 26%);
+}
+
+/*************** testimonials section *****************/
+
+#testimonial img{
+    width:80px;
+    border-radius: 50%;
+}
+#testimonial img +p {
+    color:rgb(73, 73, 73);
+}
+#testimonial h2{
+    font-size:18px;
+    color:hsl(210, 4%, 67%);
+    letter-spacing: 4px;
+}
+
+#testimonial h5 + p{
+    color:hsl(210, 4%, 67%);
+}
+
+/****************** gallery section *****************/
+#gallery .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#gallery img{
+    width:100%;
+}
+
+/* footer section */
+
+footer{
+    background-color: hsl(168, 34%, 41%);
+    text-align: center;
+    color:hsl(167, 40%, 24%);
+}
+
+footer a{
+    color:hsl(167, 40%, 24%);
+}
+footer .container{
+    width:80%;
+    margin:0 auto;
+}
+
+footer i{
+    font-size:22px;
+}
+
+footer a:hover, footer i:hover{
+    color:#fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/************ media query  **************/
+
+@media screen and (min-width:576px){
+    header{
+        background-image: url('../images/desktop/image-header.jpg');
+    }
+
+    .sec-2{
+        flex-wrap: wrap;
+    }
+
+    .sec-2 a{
+        margin-left:5px;
+    }
+
+    .width-50{
+        width:50%;
+
+    }
+    
+    .first-box{
+        order:-1;
+    }
+    .text-container{
+        text-align: left;
+        
+    }
+    .text-container h3{
+        font-size: 24px;
+        margin-top:20px;
+    }
+    .text-container p{
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .brdr1, .brdr2{
+        margin:0;
+    }
+
+    .sec-2 article{
+       
+        bottom:5%;
+    }
+    .graphic-article p,.photo-article p{
+        width:90%;
+        margin:0 auto;
+    }
+    .graphic-article h3,.photo-article h3{
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width:768px){
+    nav ul{
+        position:static;
+        width:auto;
+        text-align: left;
+        padding:0;
+        background-color: transparent;
+        opacity:1;
+    }
+    nav li{
+        margin:0 10px;
+        
+    }
+    nav a{
+        color:#fff;
+    }
+    nav ul li:last-child{
+        background-color: #fff;
+        border-radius: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+   
+    nav ul li:last-child:hover{
+        background-color: rgba(255, 255, 255, 0.37);
+    }
+    nav ul li:last-child a{
+        color:#000;
+        text-transform: uppercase;
+        background-color:transparent;
+        padding:0;
+        border-radius: 0;
+    }
+
+    nav ul li:last-child a:hover{
+        color:#fff;
+        text-decoration: none;
+    }
+    .text-container{
+        
+        width:60%;
+    }
+    .text-container h3{
+        font-size: 26px;
+    }
+    .text-container p{
+        
+        font-size: 16px;
+    }
+    .width-50 h3{
+        margin-top:25px
+    }
+    #testimonial h2{
+        font-size:24px;
+        
+    }
+
+    #testimonial .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap:15px;
+    }
+
+    #gallery .grid-container{
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    footer .container{
+        width:20%;
+    }
+    
+}
+
+@media screen and (min-width:992px){
+    .graphic-article p,.photo-article p{
+        width:60%;
+        font-size: 16px;
+    }
+
+    .text-container h3{
+        font-size: 36px;
+    }
+    .text-container p{
+        padding: 10px 0;
+        font-size: 18px;
+    }
+}
